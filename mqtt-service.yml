@@ -5,6 +5,6 @@ metadata:
   namespace: homeassistant
 spec:
   selector:
-    app: mosquitto
+    app: mqtt
   ports:
   - port: 8883
