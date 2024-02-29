@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: homeassistant-config
+  namespace: homeassistant
+  labels:
+    app: homeassistant-label
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: longhorn-static
+  resources:
+    requests:
+      storage: 5Gi
+  volumeName: "homeassistant-config"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: homeassistant-time
+  namespace: homeassistant
+  labels:
+    app: homeassistant-label
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn-static
+  resources:
+    requests:
+      storage: 5Gi
+  volumeName: "homeassistant-time"
