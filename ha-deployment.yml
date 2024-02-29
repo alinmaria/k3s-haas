@@ -28,16 +28,16 @@ spec:
         volumeMounts:
           - mountPath: /config
             name: homeassistant-config
-          - mountPath: /etc/localtime
-            name: homeassistant-time
-            readOnly: true
+          # - mountPath: /etc/localtime
+          #   name: homeassistant-time
+          #   readOnly: true
       restartPolicy: Always
       volumes:
         - name: homeassistant-config
           persistentVolumeClaim:
             claimName: homeassistant-config
-        - name: homeassistant-pv-time
-          persistentVolumeClaim:
-            claimName: homeassistant-time
-            readOnly: true
+        # - name: homeassistant-pv-time
+        #   persistentVolumeClaim:
+        #     claimName: homeassistant-time
+        #     readOnly: true
 status: {}
