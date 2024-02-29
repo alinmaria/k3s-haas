@@ -38,8 +38,8 @@ spec:
             mountPath: /app/data
           - name: z2m-udev
             mountPath: /run/udev
-          # - name: ttyacm
-          #   mountPath: /dev/ttyACM0
+          - name: ttyacm
+            mountPath: /dev/ttyACM0
       volumes:
         - name: z2m-data
           persistentVolumeClaim:
@@ -47,6 +47,6 @@ spec:
         - name: z2m-udev
           hostPath:
             path: /run/udev
-        # - name: ttyacm
-        #   hostPath:
-        #     path: /dev/ttyACM0
+        - name: ttyacm
+          hostPath:
+            path: /dev/ttyACM0
