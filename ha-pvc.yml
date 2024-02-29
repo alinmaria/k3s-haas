@@ -13,6 +13,8 @@ spec:
     requests:
       storage: 5Gi
   volumeName: "homeassistant-config"
+
+
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

@@ -14,6 +14,8 @@ spec:
     driver: driver.longhorn.io
     fsType: ext4
     volumeHandle: homeassistant-config
+
+
 ---
 apiVersion: v1
 kind: PersistentVolume
