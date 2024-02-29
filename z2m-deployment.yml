@@ -49,4 +49,4 @@ spec:
             path: /run/udev
         - name: ttyacm
           hostPath:
-            path: /dev/ttyACM0
+            path: /tmp/
