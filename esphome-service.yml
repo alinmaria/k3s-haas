@@ -13,9 +13,5 @@ spec:
   - name: esphome
     port: 6052
     targetPort: 6052
-  dnsPolicy: "None"
-      dnsConfig:
-        nameservers:
-          - 10.100.11.11 
   type: LoadBalancer
   loadBalancerIP: 10.100.99.89
