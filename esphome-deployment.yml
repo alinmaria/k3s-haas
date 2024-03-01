@@ -23,10 +23,12 @@ spec:
           name: config
         - mountPath: /etc/localtime
           name: localtime
+          readOnly: true
       volumes:
       - name: config
         persistentVolumeClaim:
           claimName: esphome-config
       - name: localtime
         hostPath:
-          path: /etc/localtime:ro
+          path: /etc/localtime
+          type: Directory
