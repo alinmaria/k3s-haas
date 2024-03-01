@@ -8,11 +8,13 @@ metadata:
     metallb.universe.tf/allow-shared-ip: "haas-shared-ip"
 spec:
   selector:
-    app: mqtt1883
+    app: mqtt
   ports:
-  - name: mqtt
+  - name: mqtt1883
     port: 1883
     targetPort: 1883
-  -
+  - name: mqtt9001
+    port: 9001
+    targetPort: 9001
   type: LoadBalancer
   loadBalancerIP: 10.100.99.89
