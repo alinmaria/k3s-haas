@@ -31,4 +31,4 @@ spec:
       - name: localtime
         hostPath:
           path: /etc/localtime
-          type: Directory
+          type: File
